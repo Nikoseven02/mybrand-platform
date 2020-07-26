@@ -1,10 +1,13 @@
 package com.gqgx.common.entity;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.*;
 
 @Table(name = "brand_large_type")
 public class BrandLargeType {
+
+    private List<BrandSmallType> smallTypeList;
     /**
      * 主键
      */
@@ -309,5 +312,13 @@ public class BrandLargeType {
      */
     public void setUpdaterId(Long updaterId) {
         this.updaterId = updaterId;
+    }
+
+    public List<BrandSmallType> getSmallTypeList() {
+        return smallTypeList;
+    }
+
+    public void setSmallTypeList(List<BrandSmallType> smallTypeList) {
+        this.smallTypeList = smallTypeList;
     }
 }
